@@ -25,3 +25,32 @@
     padding: 10px;
 }
 
+#header{
+	margin: 0px;
+	color: #333;
+	text-align: center;
+	padding: 2.5em 2em 0px;
+	border-bottom: 1px solid #EEE;
+}
+
+#profileform{
+    position: absolute;
+	margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+}
+
+#profileform .pure-form input[type]{
+	font-size: 100%;
+	width: 100%;
+}
+
+#profileform button{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+	right:0;
+    left:0;
+}
