@@ -1,20 +1,29 @@
-# web-project
 Sidor:
 ==============
 ANVÄNDARE:
 ----------------
 
-Index/Login
+* Index/Login
+  - Bildspel
 
-Min sida
+* Min sida
+  - Ändra personlig info
+  - Se bokade jobb
 
-Sök och jobb
+* Sök och jobb
+  - Filtrera jobb
+  - Se jobb för varje dag
 
 NATIONER
 ---------------
 
-Login(nation)
+* Login(nation)
+  - Inlog för varje nation
 
-Nationssida
+* Nationssida
+  - Skapa event
+  - Se alla aktiva event
+  - Se alla sökande för varje event
+  - Boka personal från de sökande
 
 
