@@ -1,1 +1,27 @@
-Test
+.pure-menu{
+    background-color: black;
+    text-align: right;
+       position: fixed;
+       top: 0px;
+       z-index: 2;
+
+}
+
+.pure-menu-item{
+    margin-right: 100px;
+    background-color: buttonface;
+    border-radius: 5px;
+    
+}
+
+#searchbar{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+    top: 25em;
+    background-color: #66CCCC;
+    padding: 10px;
+}
+
