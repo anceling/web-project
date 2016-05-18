@@ -212,19 +212,17 @@ html, button, input, select, textarea,
     height: 2em;
     width: .3em;
     background-color: white;
-    transform: rotate(45deg);
+    transition: all .5s;
 }
 
-.plus::before{
-    content: "";
-    display: block;
-    width: 2em;
+.minus{
     height: .3em;
+    width: 2em;
     background-color: white;
-    position: absolute;
-    margin-top: .85em;
     margin-left: -0.85em;
-    transform: rotate(-45deg);
+    top: -1.18em;
+    position: relative;
+  
 }
 
 

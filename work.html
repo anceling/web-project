@@ -84,7 +84,7 @@ and open the template in the editor.
                             </div>
                             <div class="pure-u-1-5">
                                 <div class="plus"></div>
-                                <div class="plus"></div>
+                                <div class="minus"></div>
                             </div>
                             
                         </div>
@@ -107,7 +107,7 @@ and open the template in the editor.
 
         <script>
         $( document ).ready(function() {
-            //$(".jobDetails").hide();   
+            $(".jobDetails").hide();   
         });
             
         $( ".jobHeader" ).click(function() {
@@ -116,6 +116,14 @@ and open the template in the editor.
           }, 500, function() {
             // Animation complete.
           });
+            $(this).find(".plus").css({
+                 '-webkit-transform' : 'rotate(90deg)',
+                  '-moz-transform'    : 'rotate(90deg)',
+                  '-ms-transform'     : 'rotate(90deg)',
+                  '-o-transform'      : 'rotate(90deg)',
+                  'transform'         : 'rotate(90deg)'
+ 
+            });
         });
 
         </script>
