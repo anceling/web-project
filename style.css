@@ -8,9 +8,6 @@
 }
 
 .pure-menu-item{
-    margin-right: 100px;
-    background-color: buttonface;
-    border-radius: 5px;
     
 }
 
@@ -20,18 +17,217 @@
     margin-right: auto;
     right:0;
     left:0;
-    top: 25em;
-    background-color: #66CCCC;
-    padding: 10px;
+    top: 10em;
+    background-color: black;
+    display: inline;
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+}
+
+#searchbar select, #searchbar input[type="date"]{
+    border-radius: 0;
+    height: 2.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+#searchbarButton{
+    border: none;
+    width: 100%;
+    height: 2.5em;
+    color: white;
+    background: rgba(72,155,194,1);
+    background: -moz-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(72,155,194,1)), color-stop(100%, rgba(222,51,51,1)));
+    background: -webkit-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    background: linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#489bc2', endColorstr='#de3333', GradientType=1 );
+}
+
+#searchbar label{
+    color: white;
+    
+}
+
+
+select{
+    margin: none;
 }
 
 #header{
-	margin: 0px;
-	color: #333;
-	text-align: center;
-	padding: 2.5em 2em 0px;
-	border-bottom: 1px solid #EEE;
+	
+    height: 100%;
+    width: 100%;
 }
+
+#dayContainer{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+    top: 20em;
+    width: 60%;
+
+}
+
+.day{
+    width: 100%;
+    height: 100px;
+    
+}
+
+.day h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.day h1::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: rgba(72,155,194,1);
+    background: -moz-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(186,77,77,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(72,155,194,1)), color-stop(100%, rgba(186,77,77,1)));
+    background: -webkit-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(186,77,77,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(186,77,77,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(186,77,77,1) 100%);
+    background: linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(186,77,77,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#489bc2', endColorstr='#ba4d4d', GradientType=1 );
+
+}
+
+.job{
+    width: 100%;
+    margin-top: 1.5em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: black;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    
+}
+
+.job h3{
+    
+    float: left;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+
+}
+
+.jobDetails{
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    height: 10em;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 3px;
+}
+
+
+.jobDetails p{
+    text-align: left;
+}
+
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.job_location::before{
+    content:url('Assets/Images/castle.png'); /* with class ModalCarrot ??*/
+    position:relative; /*or absolute*/
+    left: -0.25em;
+    top: 0.25em;
+}
+
+.job_time::before{
+  content:url('Assets/Images/clock.png'); /* with class ModalCarrot ??*/
+  position:relative; /*or absolute*/
+  left: -0.25em;
+    top: 0.25em;
+
+}
+
+.job_position::before{
+  content:url('Assets/Images/profile.png'); /* with class ModalCarrot ??*/
+  position:relative; /*or absolute*/
+  left: -0.25em;
+    top: 0.25em;
+
+}
+
+.applyButton{
+    border: none;
+    height: 2.5em;
+    width: 25%;
+    border-radius: 3px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+        
+    color: white;
+    background: rgba(72,155,194,1);
+    background: -moz-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(72,155,194,1)), color-stop(100%, rgba(222,51,51,1)));
+    background: -webkit-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    background: linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#489bc2', endColorstr='#de3333', GradientType=1 );
+
+}
+
+.jobHeader{
+    padding: .75em;
+    padding-left: 2em;
+}
+
+.jobNumber{
+    font-size: .5em;
+    font-weight: normal;
+}
+
+.plus{
+    height: 2em;
+    width: .3em;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.plus::before{
+    content: "";
+    display: block;
+    width: 2em;
+    height: .3em;
+    background-color: white;
+    position: absolute;
+    margin-top: .85em;
+    margin-left: -0.85em;
+    transform: rotate(-45deg);
+}
+
+
 
 #profileform{
     position: absolute;
