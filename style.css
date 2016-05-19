@@ -7,8 +7,8 @@
 
 }
 
-.pure-menu-item{
-    
+.pure-menu-item a{
+   color: white; 
 }
 
 #searchbar{
@@ -53,19 +53,12 @@
 }
 
 #searchbar label{
-    color: white;
-    
+    color: white; 
 }
 
 
 select{
     margin: none;
-}
-
-#header{
-	
-    height: 100%;
-    width: 100%;
 }
 
 #dayContainer{
@@ -112,7 +105,6 @@ select{
     -webkit-box-sizing: border-box;
     background-color: black;
     border-radius: 3px;
-    cursor: pointer;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
     
 }
@@ -195,12 +187,25 @@ html, button, input, select, textarea,
     background: -ms-linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
     background: linear-gradient(45deg, rgba(72,155,194,1) 0%, rgba(222,51,51,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#489bc2', endColorstr='#de3333', GradientType=1 );
+    transition: all .2s;
+}
 
+.applyButton:hover{
+    transform: scale(1.1);
+}
+.applyButton:active{
+    transform: scale(1);
 }
 
 .jobHeader{
     padding: .75em;
     padding-left: 2em;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.jobHeader:hover{
+    opacity: 0.9;
 }
 
 .jobNumber{
@@ -212,7 +217,7 @@ html, button, input, select, textarea,
     height: 2em;
     width: .3em;
     background-color: white;
-    transition: all .5s;
+    transition: all .3s;
 }
 
 .minus{
@@ -223,6 +228,19 @@ html, button, input, select, textarea,
     top: -1.18em;
     position: relative;
   
+}
+
+.plusAndMinus{
+    float: right;
+}
+
+#date_from::before{
+    content: "From:  ";
+    color: black;
+}
+#date_to::before{
+    content: "To:  ";
+    color: black;
 }
 
 
