@@ -12,8 +12,7 @@
     background-color: buttonface;
     border-radius: 5px;
     
-}
-
+} 
 #searchbar{
     position: absolute;
     margin-left: auto;
@@ -24,4 +23,70 @@
     background-color: #66CCCC;
     padding: 10px;
 }
+.splash-container {
+    //background: #1f8dd6;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+
+}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* This is the main heading that appears on the blue section */
+.splash-head {
+	font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: normal;
+    color: white;
+}
+html,body {
+	margin: 0;
+	padding: 0;
+	
+}
+.slider {
+	width: 100%;
+	margin: auto;
+	
+	
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	
+}
+
+.slide 
+{
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 2s linear;
+	
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+img
+{
+background-size: cover;
+}
+
+
+
 
