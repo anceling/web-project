@@ -18,6 +18,8 @@ and open the template in the editor.
 
     </head>
     <body>
+
+        
         <div class="pure-menu pure-menu-horizontal">
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">MY PROFILE</a></li>
@@ -39,7 +41,6 @@ and open the template in the editor.
                             <option value="västmanlands-dala">Västmanlands-Dala nation</option>
                             <option value="smålands">Smålands nation</option>
                             <option value="göteborgse">Göteborgs nation</option>
-                            <option value="kalmar">Kalmar nation</option>
                             <option value="kalmar">Kalmar nation</option>
                             <option value="norrlands">Norrlands nation</option>
                             <option value="gotlands">Gotlands nation</option>
@@ -72,52 +73,124 @@ and open the template in the editor.
             <div class="day">
                 
                 <h1>Tisdag, 17/5</h1>
-                <div class="job">
-                    <div class="jobHeader">
-                        <div class="pure-g">
-                            <div class="pure-u-1-4">
-                                <h3 class="job_location">STOCKEN</h3>
-                            </div>
-                            <div class="pure-u-1-4">
-                                <h3 class="job_position">BARTENDER <span class="jobNumber">(2 platser)</span></h3>
-                            </div>
-                            <div class="pure-u-1-4">
-                                <h3 class="job_time">18.00 - 22.00</h3>
-                            </div>
-                            <div class="pure-u-1-5">
-                                <div class="plusAndMinus">
-                                    <div class="plus"></div>
-                                    <div class="minus"></div>
+                <?php
+
+                    $conn = new mysqli("localhost", "root", "admin", "nationsjobb");
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    $sql = "SELECT * from shift";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        
+                        while($row = $result->fetch_assoc()) {
+                            //HEADER
+                            $nation = $row["nation_name"];
+                            $category = $row["category"];
+                            $time_from_raw = $row["time_from"];
+                            $time_to_raw = $row["time_to"];
+                            $empnum = $row["empnum"];
+                            
+                            $time_from_formated = strtotime($time_from_raw);
+                            $time_from = date("H:i", $time_from_formated);
+
+                            $time_to_formated = strtotime($time_to_raw);
+                            $time_to = date("H:i", $time_to_formated);
+
+                            
+                            //MORE INFO
+                            $description = $row["description"];
+                            
+                            $result = mysqli_query($conn, "SELECT nation_info FROM nations WHERE nation_name = '$nation'");
+                            if (!$result) {
+                                echo 'Could not run query: ' . mysql_error();
+                                exit;
+                            }
+                            $row = mysqli_fetch_row($result);
+
+                            $nation_info = $row[0];
+                            
+                            
+                            
+                            
+                            ?>
+                
+                            
+                            <div class="job">
+                                <div class="jobHeader">
+                                    <div class="pure-g">
+                                        <div class="pure-u-1-4">
+                                            <h3 class="job_location"><?php echo $nation ?></h3>
+                                        </div>
+                                        <div class="pure-u-1-4">
+                                            <h3 class="job_position"><?php echo $category ?> <span class="jobNumber">(<?php echo $empnum ?> platser)</span></h3>
+                                        </div>
+                                        <div class="pure-u-1-4">
+                                            <h3 class="job_time"><?php echo $time_from ." - ". $time_to?></h3>
+                                        </div>
+                                        <div class="pure-u-1-5">
+                                            <div class="plusAndMinus">
+                                                <div class="plus"></div>
+                                                <div class="minus"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="jobDetails">
+                                    <div class="pure-g">
+                                        <div class="pure-u-1 pure-u-md-1-2">
+                                            <p class="nationDescription"><?php echo $nation ?>:<br><?php echo $nation_info ?></p>
+                                        </div>
+                                        <div class="pure-u-1 pure-u-md-1-2">
+                                            <p class="jobDescription"><?php echo $category ?>:<br><?php echo $description ?></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <input type="button" class="applyButton" id="popUpButton" value="APPLY" onclick="showPopUp('<?php echo $category?>', 
+                                                                                                                     '<?php echo $nation?>', '<?php echo $time_from?>', '<?php echo $time_to?>')">
                                 </div>
                             </div>
-                            
-                        </div>
-                    </div>
-                    <div class="jobDetails">
-                        <div class="pure-g">
-                            <div class="pure-u-1 pure-u-md-1-2">
-                                <p class="nationDescription">STOCKEN:<br>Info om nationen info om nationen. Info om nationen. Info om nationen.</p>
-                            </div>
-                            <div class="pure-u-1 pure-u-md-1-2">
-                                <p class="jobDescription">BARTENDER:<br>Info om jobbet info om jobbet. Info om jobbet. Info om jobbet.</p>
-                            </div>
-                        </div>
-                        <input type="button" class="applyButton" value="APPLY">
-                    </div>
 
-                </div>
+                            <?php
 
+                        }
+                    } else {
+                        echo "There are no jobs available.";
+                    }
+
+                ?>
                 
                 
             </div>
         </div>
         
-        
+        <div id="popUp">
+            <h2>Do you wish to apply for:</h2>
+            <p id="popUp_category"></p>
+            <form name ="applyForm" methos="POST">
+                <input type="submit" class="applyButton" value="APPLY">
+            </form>
+        </div>
 
+     
 
         <script>
+            
+            
+        function showPopUp(category, nation, time_from, time_to){
+            $("#popUp").show();
+
+            var message = category + " at " + nation + " between " + time_from + " and " + time_to;
+            
+            document.getElementById("popUp_category").innerHTML = message;
+        }
+            
         $( document ).ready(function() {
             $(".jobDetails").hide(); 
+        
             var now = new Date();
             
             var day = ("0" + now.getDate()).slice(-2);
@@ -134,6 +207,8 @@ and open the template in the editor.
 
 
             $('#date_to').val(_today);
+            
+            $("#popUp").hide();
         });
             
             

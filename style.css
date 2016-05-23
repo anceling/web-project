@@ -7,16 +7,47 @@
 
 }
 
-<<<<<<< HEAD
 .pure-menu-item a{
    color: white; 
 }
 
-=======
 .pure-menu-item{
     
 } 
->>>>>>> 6e907e65be1674235a9b95efce6f1b08b254cc53
+
+
+#popUp{
+    width: 40%;
+    height: 40%;
+    background-color: black;
+    position: fixed;
+    left: 30%;
+    top: 20%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+#popUp form{
+    text-align: center;
+}
+
+#popUpButton{
+    margin: 0 auto;
+}
+
+#popUp h2{
+    text-align: center;
+    
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+#popUp p{
+    text-align: center;
+    
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
 #searchbar{
     position: absolute;
     margin-left: auto;
@@ -263,7 +294,7 @@ html, button, input, select, textarea,
 }
 
 .applyButton:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .applyButton:active{
     transform: scale(1);
