@@ -1,6 +1,6 @@
 <?php
 
-require 'fastroute/';
+require 'vendor/autoload.php';
 
 
 
