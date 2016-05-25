@@ -87,7 +87,7 @@ function showwork($vars){
 	
 	$natname = "";
 	$cat = "";
-	$render_array[];
+	//$render_array[];
 	$all = True;
 	
 	
@@ -110,7 +110,7 @@ function showwork($vars){
 	}
 		
 		
-		$sql->close();
+		//$sql->close();
 		
 		
 	}
