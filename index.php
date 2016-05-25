@@ -84,19 +84,7 @@ function show_work_all($vars){
 	$twig = inittwig();
 	$sql = initdb();
 	
-	
-	//temp
-	
-	$natname = "";
-	$cat = "";
-	$render_array = [];
-	$all = True;
-	
-	
-	//Change to POST method already in router??
-	
-	
-	if ($all){
+
 		
 		$result = $sql->query("SELECT * FROM shift");
 		
@@ -111,13 +99,25 @@ function show_work_all($vars){
 		
 	}
 		
-		
 		$sql->close();
 		
-	}
+
+
+	echo $twig->render('work.html', array("jobs" => $render_array));
+
+}
+
+
+
+function show_work($vars){
 	
 	
-	else {
+	echo $_POST["nation"];
+	echo $_POST["pos"];
+	
+	
+	
+
 	
 	
 	
@@ -138,26 +138,6 @@ function show_work_all($vars){
 		
 		
 	}
-	
-	
-	}
-
-	echo $twig->render('work.html', array("jobs" => $render_array));
-
-}
-
-
-
-function show_work($vars){
-	
-	
-	echo $_POST["nation"];
-	echo $_POST["pos"];
-	
-	
-	
-	echo $vars;
-	
 	
 	
 	
