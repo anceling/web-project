@@ -11,11 +11,11 @@ require 'vendor/autoload.php';
 
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    $r->addRoute('GET', '/', 'showindex');
+    $r->addRoute('GET', '/', 'show_index');
 
-    $r->addRoute('GET', '/work', 'showwork');
+    $r->addRoute('GET', '/work', 'show_work');
 
-    $r->addRoute('GET', '/profile', 'showprofile');
+    $r->addRoute('GET', '/profile', 'show_profile');
 });
 
 // Fetch method and URI from somewhere
@@ -51,10 +51,7 @@ switch ($routeInfo[0]) {
 function inittwig(){
 	
 	$loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
-	$twig = new Twig_Environment($loader, array(
-		// Uncomment the line below to cache compiled templates
-		// 'cache' => __DIR__.'/../cache',
-	));
+	$twig = new Twig_Environment($loader, array());
 
 return $twig;
 }
@@ -73,7 +70,7 @@ function initdb(){
 
 
 
-function showindex($vars){
+function show_index($vars){
 
 	$twig = inittwig();
 
@@ -81,7 +78,7 @@ function showindex($vars){
 
 }
 
-function showwork($vars){
+function show_work($vars){
 
 	$twig = inittwig();
 	$sql = initdb();
@@ -148,7 +145,7 @@ function showwork($vars){
 
 }
 
-function showprofile($vars){
+function show_profile($vars){
 
 	$twig = inittwig();
 
