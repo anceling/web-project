@@ -12,8 +12,8 @@
 
 
 
-<input id="date_from" type="date">  
 
 
 
-<input id="date_to" type="date">
+
+<input type="button" class="applyButton" value="APPLY">
