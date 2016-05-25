@@ -60,11 +60,8 @@ switch ($routeInfo[0]) {
 
 
 
+class show{
 
-
-function showindex($vars){
-	
-	
 	
 $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
 $twig = new Twig_Environment($loader, array(
@@ -72,6 +69,14 @@ $twig = new Twig_Environment($loader, array(
     // 'cache' => __DIR__.'/../cache',
 ));
 	
+
+
+
+
+function index($vars){
+	
+	
+
 	
 	
 	
@@ -86,6 +91,11 @@ echo $twig->render('index.html');
 	
 }
 
+
+
+
+
+}
 
 
 ?>
