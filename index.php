@@ -10,6 +10,22 @@ require 'vendor/autoload.php';
 
 
 
+
+
+
+	echo $_POST["nation"];
+	echo $_POST["pos"];
+	
+	
+	
+	echo $vars;
+
+
+
+
+
+
+
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'show_index');
 
