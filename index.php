@@ -57,9 +57,9 @@ switch ($routeInfo[0]) {
 
 
 
-function showindex(){
+function showindex($vars){
 
-	echo $twig->render('index.html', array('name' => 'Fabien'));
+	echo $twig->render('index.html');
 	
 }
 
