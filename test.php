@@ -8,3 +8,12 @@
 
 
 ?>
+
+
+
+
+<input id="date_from" type="date">  
+
+
+
+<input id="date_to" type="date">
