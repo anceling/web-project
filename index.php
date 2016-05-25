@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(22527);
+
 require 'vendor/autoload.php';
 //require 'handlers.php'
 
