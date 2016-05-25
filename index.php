@@ -9,29 +9,12 @@ require 'vendor/autoload.php';
 //require 'handlers.php'
 
 
-
-
-
-
-	echo $_POST["nation"];
-	echo $_POST["pos"];
-	
-	
-	
-	echo $vars;
-
-
-
-
-
-
-
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'show_index');
 
     $r->addRoute('GET', '/work', 'show_work_all');
     
-    $r->addRoute('POST', '/work', 'show_work');
+    $r->addRoute('GET', '/work/', 'show_work');
 
     $r->addRoute('GET', '/profile', 'show_profile');
 });
