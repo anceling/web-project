@@ -65,6 +65,8 @@ function initdb(){
 	
 	$sql = mysqli_connect("localhost", "admincjiXjF7", "SspyVLYLh4Xb", "nationsjobb");
 	
+	$sql->set_charset("utf8");
+	
 	return $sql;
 }
 
