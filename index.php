@@ -6,6 +6,18 @@ require 'vendor/autoload.php';
 
 
 
+
+$loader = new Twig_Loader_Filesystem('templates');
+$twig = new Twig_Environment($loader, array(
+    'cache' => 'compilation_cache',
+));
+
+
+
+
+
+
+
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'showindex');
     // {id} must be a number (\d+)
@@ -46,7 +58,8 @@ switch ($routeInfo[0]) {
 
 
 function showindex(){
-	echo "hej";
+
+	echo $twig->render('index.html');
 	
 }
 
