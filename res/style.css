@@ -259,10 +259,14 @@ html, button, input, select, textarea,
 
 .job_location::before{
 <<<<<<< HEAD
+<<<<<<< HEAD
     content:url('castle.png'); /* with class ModalCarrot ??*/
 =======
     content:url('../res/castle.png'); /* with class ModalCarrot ??*/
 >>>>>>> 6a1dc2f10b7f4333596b14be6f9cab03951bd385
+=======
+    content:url('castle.png'); /* with class ModalCarrot ??*/
+>>>>>>> 56cc2edace4a3acbd17ea4c217e5990889dfb5f2
     position:relative; /*or absolute*/
     left: -0.25em;
     top: 0.25em;
@@ -270,10 +274,14 @@ html, button, input, select, textarea,
 
 .job_time::before{
 <<<<<<< HEAD
+<<<<<<< HEAD
   content:url('clock.png'); /* with class ModalCarrot ??*/
 =======
   content:url('../res/clock.png'); /* with class ModalCarrot ??*/
 >>>>>>> 6a1dc2f10b7f4333596b14be6f9cab03951bd385
+=======
+  content:url('clock.png'); /* with class ModalCarrot ??*/
+>>>>>>> 56cc2edace4a3acbd17ea4c217e5990889dfb5f2
   position:relative; /*or absolute*/
   left: -0.25em;
     top: 0.25em;
@@ -282,10 +290,14 @@ html, button, input, select, textarea,
 
 .job_position::before{
 <<<<<<< HEAD
+<<<<<<< HEAD
   content:url('profile.png'); /* with class ModalCarrot ??*/
 =======
   content:url('../res/profile.png'); /* with class ModalCarrot ??*/
 >>>>>>> 6a1dc2f10b7f4333596b14be6f9cab03951bd385
+=======
+  content:url('profile.png'); /* with class ModalCarrot ??*/
+>>>>>>> 56cc2edace4a3acbd17ea4c217e5990889dfb5f2
   position:relative; /*or absolute*/
   left: -0.25em;
     top: 0.25em;
