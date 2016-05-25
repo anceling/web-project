@@ -378,3 +378,11 @@ html, button, input, select, textarea,
 	right:0;
     left:0;
 }
+
+#header{
+margin: 0px;
+color: #333;
+text-align: center;
+padding: 2.5em 2em 0px;
+border-bottom: 1px solid #eee;
+}
