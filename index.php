@@ -87,6 +87,30 @@ function showwork($vars){
 	
 	$natname = "";
 	$cat = "";
+	$all = True;
+	
+	
+	if ($all){
+		
+		$result = $sql->query("SELECT * FROM shift");
+		
+		
+		while ($row = $result->fetch_assoc()){
+		
+		
+		echo $row["nation_name"];
+		
+		
+	}
+		
+		
+		$sql->close();
+		
+		
+	}
+	
+	
+	else {
 	
 	
 	
@@ -108,8 +132,10 @@ function showwork($vars){
 		
 	}
 	
+	
+	}
 
-	//echo $twig->render('work.html');
+	echo $twig->render('work.html');
 
 }
 
