@@ -81,6 +81,33 @@ function showwork($vars){
 
 	$twig = inittwig();
 	$sql = initdb();
+	
+	
+	//temp
+	
+	$natname = "";
+	$cat = "";
+	
+	
+	
+	$stmt = $sql->stmt_init();
+	
+	$stmt->prepare("SELECT * FROM shift WHERE nation_name=? AND category=?");
+	
+	$stmt->bind_param("ss", $natname, $cat);
+	
+	$stmt->execute();
+	
+	$result = $stmt->get_result();
+	
+	while ($row = $result->fetch_assoc()){
+		
+		
+		echo $row["nation_name"];
+		
+		
+	}
+	
 
 	echo $twig->render('work.html');
 
