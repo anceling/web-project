@@ -258,14 +258,14 @@ html, button, input, select, textarea,
 }
 
 .job_location::before{
-    content:url('../res/castle.png'); /* with class ModalCarrot ??*/
+    content:url('Assets/Images/castle.png'); /* with class ModalCarrot ??*/
     position:relative; /*or absolute*/
     left: -0.25em;
     top: 0.25em;
 }
 
 .job_time::before{
-  content:url('../res/clock.png'); /* with class ModalCarrot ??*/
+  content:url('Assets/Images/clock.png'); /* with class ModalCarrot ??*/
   position:relative; /*or absolute*/
   left: -0.25em;
     top: 0.25em;
@@ -273,7 +273,7 @@ html, button, input, select, textarea,
 }
 
 .job_position::before{
-  content:url('../res/profile.png'); /* with class ModalCarrot ??*/
+  content:url('Assets/Images/profile.png'); /* with class ModalCarrot ??*/
   position:relative; /*or absolute*/
   left: -0.25em;
     top: 0.25em;
