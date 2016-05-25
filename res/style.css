@@ -1,3 +1,16 @@
+
+@media screen and (min-width: 64em) {
+
+#searchbar{
+
+width: 60% !important;
+
+}
+
+
+}
+
+
 .pure-menu{
     background-color: black;
     text-align: right;
@@ -50,9 +63,7 @@
 
 #searchbar{
     position: absolute;
-/*
-    width: 60%;
-*/
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     right:0;
@@ -69,8 +80,8 @@
 
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-
 }
+
 #searchbar form{
     text-align: center;
 }
