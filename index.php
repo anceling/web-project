@@ -6,18 +6,8 @@ require 'handlers.php'
 
 
 
-$loader = new Twig_Loader_Filesystem('templates');
-$twig = new Twig_Environment($loader, array(
-    'cache' => 'compilation_cache',
-));
-
-
-
-
-
-
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    $r->addRoute('GET', '/', 'index');
+    $r->addRoute('GET', '/', 'showindex');
     // {id} must be a number (\d+)
     $r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');
     // The /{title} suffix is optional
