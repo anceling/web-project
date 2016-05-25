@@ -8,18 +8,6 @@ require 'vendor/autoload.php';
 
 
 
-
-
-$loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
-$twig = new Twig_Environment($loader, array(
-    // Uncomment the line below to cache compiled templates
-    // 'cache' => __DIR__.'/../cache',
-));
-
-
-
-
-
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'showindex');
 
@@ -74,10 +62,6 @@ return $twig;
 function initdb(){
 	
 	$sql = mysqli_connect("localhost", "admincjiXjF7", "SspyVLYLh4Xb", "nationsjobb");
-	
-	if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
 	
 	return $sql;
 }
