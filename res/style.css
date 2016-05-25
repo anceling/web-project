@@ -50,14 +50,18 @@
 
 #searchbar{
     position: absolute;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     right:0;
     left:0;
     top: 10em;
+    
     background-color: black;
     display: inline;
-    padding: 1em;
+    padding: .5em;
+        padding-top: 1em;
+
     border-radius: 3px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 
@@ -65,18 +69,23 @@
     -webkit-box-sizing: border-box;
 
 }
-
-#searchbar select, #searchbar input[type="date"]{
-    border-radius: 0;
-    height: 2.5em;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    
+#searchbar form{
+    text-align: center;
 }
 
-#searchbarButton{
+#searchbar select, #searchbar input[type="date"]{
     border: none;
-    width: 100%;
+    height: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    width: 95%;
+}
+
+
+#searchbarButton{
+    text-align: center;
+    border: none;
+    width: 95%;
     height: 2.5em;
     color: white;
     background: rgba(72,155,194,1);
@@ -104,7 +113,7 @@ select{
     margin-right: auto;
     right:0;
     left:0;
-    top: 20em;
+    top: 25em;
     width: 60%;
 
 }
@@ -249,14 +258,22 @@ html, button, input, select, textarea,
 }
 
 .job_location::before{
+<<<<<<< HEAD
     content:url('castle.png'); /* with class ModalCarrot ??*/
+=======
+    content:url('../res/castle.png'); /* with class ModalCarrot ??*/
+>>>>>>> 6a1dc2f10b7f4333596b14be6f9cab03951bd385
     position:relative; /*or absolute*/
     left: -0.25em;
     top: 0.25em;
 }
 
 .job_time::before{
+<<<<<<< HEAD
   content:url('clock.png'); /* with class ModalCarrot ??*/
+=======
+  content:url('../res/clock.png'); /* with class ModalCarrot ??*/
+>>>>>>> 6a1dc2f10b7f4333596b14be6f9cab03951bd385
   position:relative; /*or absolute*/
   left: -0.25em;
     top: 0.25em;
@@ -264,7 +281,11 @@ html, button, input, select, textarea,
 }
 
 .job_position::before{
+<<<<<<< HEAD
   content:url('profile.png'); /* with class ModalCarrot ??*/
+=======
+  content:url('../res/profile.png'); /* with class ModalCarrot ??*/
+>>>>>>> 6a1dc2f10b7f4333596b14be6f9cab03951bd385
   position:relative; /*or absolute*/
   left: -0.25em;
     top: 0.25em;
