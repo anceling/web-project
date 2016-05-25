@@ -2,11 +2,10 @@
 
 	{% include 'head.html' with {'title': 'Work at nations'} %}
 
-<html>
     <body>
         <div class="pure-menu pure-menu-horizontal">
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="/profile" class="pure-menu-link">MY PROFILE</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">MY PROFILE</a></li>
             </ul>
             
         </div>
@@ -56,15 +55,15 @@
         </div>
         <div id="dayContainer">
             <div class="day">
-           {# {% for day in days %}
+            {% for day in days %}
                 <h1>{{ day.weekday }}, {{ day.date }}</h1>
-                {% for job in render_array %} #}
+                {% for job in day.jobs %}
                 <div class="job">
 
                     <div class="jobHeader">
                         <div class="pure-g">
                             <div class="pure-u-1-4">
-                                <h3 class="job_location">{{ job.nation_name }}</h3>
+                                <h3 class="job_location">{{ job.nation }}</h3>
                             </div>
                             <div class="pure-u-1-4">
                                 <h3 class="job_position">{{ job.category }}<span class="jobNumber">({{ job.empnum }})</span></h3>
@@ -96,12 +95,12 @@
                 {% else %}
                     There are no jobs available.
                 {% endfor %}
-          {#  {% else %}
+            {% else %}
                 There are no days with jobs.
-            {% endfor %} #}
+            {% endfor %}
             </div>
         </div>
         
-        <script src="http://php-badc0ffee0ddf00d.rhcloud.com/res/work_functions.js"></script>
+        <script src="../res/work_functions.js"></script>
     </body>
 </html>
