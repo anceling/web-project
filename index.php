@@ -1,12 +1,23 @@
 <?php
 
 require 'vendor/autoload.php';
+require 'handlers.php'
+
+
+
+
+$loader = new Twig_Loader_Filesystem('templates');
+$twig = new Twig_Environment($loader, array(
+    'cache' => 'compilation_cache',
+));
+
+
 
 
 
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    $r->addRoute('GET', '/users', 'get_all_users_handler');
+    $r->addRoute('GET', '/', 'index');
     // {id} must be a number (\d+)
     $r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');
     // The /{title} suffix is optional
@@ -38,14 +49,9 @@ switch ($routeInfo[0]) {
         $handler = $routeInfo[1];
         $vars = $routeInfo[2];
         // ... call $handler with $vars
-        echo "success";
+        call_user_func($handler, $vars);
         break;
 }
-
-
-
-
-
 
 
 
