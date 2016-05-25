@@ -22,9 +22,9 @@ $twig = new Twig_Environment($loader, array(
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'showindex');
-    // {id} must be a number (\d+)
-    $r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');
-    // The /{title} suffix is optional
+
+    $r->addRoute('GET', '/work', 'showwork');
+
     $r->addRoute('GET', '/articles/{id:\d+}[/{title}]', 'get_article_handler');
 });
 
@@ -74,23 +74,18 @@ return $twig;
 
 function showindex($vars){
 
+	$twig = inittwig();
 
-$twig = inittwig();
-
-
-
-echo $twig->render('index.html');
-	
-	echo "ahej13";
-	
-	
-
-
-
-
-
+	echo $twig->render('index.html');
 
 }
 
+function showwork($vars){
+
+	$twig = inittwig();
+
+	echo $twig->render('work.html');
+
+}
 
 ?>
