@@ -67,9 +67,7 @@ function showindex($vars,$twig){
 	$name = "Mercury, Venus, Mars, Jupiter, Saturn, Uranus & Neptune.";
 
 
-	echo $twig->render('index.html', array(
-    'name' => $name,
-));
+echo $twig->render('index.html');
 	
 	echo "ahej13";
 	
