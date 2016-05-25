@@ -60,13 +60,26 @@ switch ($routeInfo[0]) {
 
 function inittwig(){
 	
-$loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
-$twig = new Twig_Environment($loader, array(
-    // Uncomment the line below to cache compiled templates
-    // 'cache' => __DIR__.'/../cache',
-));
+	$loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
+	$twig = new Twig_Environment($loader, array(
+		// Uncomment the line below to cache compiled templates
+		// 'cache' => __DIR__.'/../cache',
+	));
 
 return $twig;
+}
+
+
+
+function initdb(){
+	
+	$sql = mysqli_connect("localhost", "admincjiXjF7", "SspyVLYLh4Xb", "nationsjobb");
+	
+	if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+	
+	return $sql;
 }
 
 
@@ -83,6 +96,7 @@ function showindex($vars){
 function showwork($vars){
 
 	$twig = inittwig();
+	$sql = initdb();
 
 	echo $twig->render('work.html');
 
