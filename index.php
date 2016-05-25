@@ -58,28 +58,24 @@ switch ($routeInfo[0]) {
 }
 
 
-
-
-class show{
-
+function inittwig(){
 	
 $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
 $twig = new Twig_Environment($loader, array(
     // Uncomment the line below to cache compiled templates
     // 'cache' => __DIR__.'/../cache',
 ));
-	
+
+return $twig;
+}
 
 
 
 
-function index($vars){
-	
-	
+function showindex($vars){
 
-	
-	
-	
+
+$twig = inittwig();
 
 	$name = "Mercury, Venus, Mars, Jupiter, Saturn, Uranus & Neptune.";
 
@@ -89,7 +85,7 @@ echo $twig->render('index.html');
 	echo "ahej13";
 	
 	
-}
+
 
 
 
