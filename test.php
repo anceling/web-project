@@ -16,4 +16,4 @@
 
 
 
-<input type="button" class="applyButton" value="APPLY">
+
