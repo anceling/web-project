@@ -87,7 +87,11 @@ function showwork($vars){
 	
 	$natname = "";
 	$cat = "";
+	$render_array[];
 	$all = True;
+	
+	
+	//Change to POST method already in router??
 	
 	
 	if ($all){
@@ -95,11 +99,13 @@ function showwork($vars){
 		$result = $sql->query("SELECT * FROM shift");
 		
 		
+		$i = 0;
+		
 		while ($row = $result->fetch_assoc()){
 		
+		$render_array[$i];
 		
-		echo $row["nation_name"];
-		
+		$i = ++$i;
 		
 	}
 		
@@ -135,7 +141,7 @@ function showwork($vars){
 	
 	}
 
-	echo $twig->render('work.html');
+	echo $twig->render('work.html', $render_array);
 
 }
 

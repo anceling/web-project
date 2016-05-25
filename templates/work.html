@@ -56,15 +56,15 @@
         </div>
         <div id="dayContainer">
             <div class="day">
-            {% for day in days %}
+           {# {% for day in days %}
                 <h1>{{ day.weekday }}, {{ day.date }}</h1>
-                {% for job in day.jobs %}
+                {% for job in render_array %} #}
                 <div class="job">
 
                     <div class="jobHeader">
                         <div class="pure-g">
                             <div class="pure-u-1-4">
-                                <h3 class="job_location">{{ job.nation }}</h3>
+                                <h3 class="job_location">{{ job.nation_name }}</h3>
                             </div>
                             <div class="pure-u-1-4">
                                 <h3 class="job_position">{{ job.category }}<span class="jobNumber">({{ job.empnum }})</span></h3>
@@ -96,9 +96,9 @@
                 {% else %}
                     There are no jobs available.
                 {% endfor %}
-            {% else %}
+          {#  {% else %}
                 There are no days with jobs.
-            {% endfor %}
+            {% endfor %} #}
             </div>
         </div>
         
