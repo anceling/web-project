@@ -81,7 +81,7 @@ $twig = inittwig();
 
 echo $twig->render('index.html');
 	
-	echo "ahej13";
+
 	
 	
 
