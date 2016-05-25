@@ -10,6 +10,7 @@ require 'vendor/autoload.php';
 
 $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
 $twig = new Twig_Environment($loader, array(
+	'debug' => true
     // Uncomment the line below to cache compiled templates
     // 'cache' => __DIR__.'/../cache',
 ));
