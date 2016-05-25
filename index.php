@@ -8,14 +8,12 @@ require 'vendor/autoload.php';
 
 
 
-//$loader = new Twig_Loader_Filesystem(_DIR_.'/templates');
-//$twig = new Twig_Environment($loader, array(
+$loader = new Twig_Loader_Filesystem('templates/');
+$twig = new Twig_Environment($loader, array(
     // Uncomment the line below to cache compiled templates
     // 'cache' => __DIR__.'/../cache',
-//));
+));
 
-
-echo _DIR_.'/templates';
 
 
 
