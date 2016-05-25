@@ -13,7 +13,7 @@ require 'vendor/autoload.php';
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'show_index');
 
-    $r->addRoute('GET', '/work', 'show_work');
+    $r->addRoute('GET', '/work', 'show_work_all');
 
     $r->addRoute('GET', '/profile', 'show_profile');
 });
@@ -78,7 +78,7 @@ function show_index($vars){
 
 }
 
-function show_work($vars){
+function show_work_all($vars){
 
 	$twig = inittwig();
 	$sql = initdb();
@@ -144,6 +144,32 @@ function show_work($vars){
 	echo $twig->render('work.html', array("jobs" => $render_array));
 
 }
+
+
+
+function show_work($vars){
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
 
 function show_profile($vars){
 
