@@ -77,7 +77,6 @@ function showindex($vars){
 
 $twig = inittwig();
 
-	$name = "Mercury, Venus, Mars, Jupiter, Saturn, Uranus & Neptune.";
 
 
 echo $twig->render('index.html');
