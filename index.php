@@ -25,7 +25,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 
     $r->addRoute('GET', '/work', 'showwork');
 
-    $r->addRoute('GET', '/articles/{id:\d+}[/{title}]', 'get_article_handler');
+    $r->addRoute('GET', '/profile', 'showprofile');
 });
 
 // Fetch method and URI from somewhere
@@ -85,6 +85,14 @@ function showwork($vars){
 	$twig = inittwig();
 
 	echo $twig->render('work.html');
+
+}
+
+function showprofile($vars){
+
+	$twig = inittwig();
+
+	echo $twig->render('profile.html');
 
 }
 
