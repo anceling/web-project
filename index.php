@@ -157,7 +157,7 @@ function show_work($vars){
 	
 	
 	
-	
+	echo $vars;
 	
 	
 	
