@@ -55,8 +55,8 @@
         </div>
         <div id="dayContainer">
             <div class="day">
-            {% for day in days %}
-                <h1>{{ day.weekday }}, {{ day.date }}</h1>
+           {# {% for day in days %} #}
+                <h1>{# {{ day.weekday }}, {{ day.date }} #}</h1>
                 {% for job in day.jobs %}
                 <div class="job">
 
@@ -95,9 +95,9 @@
                 {% else %}
                     There are no jobs available.
                 {% endfor %}
-            {% else %}
+           {# {% else %}
                 There are no days with jobs.
-            {% endfor %}
+            {% endfor %} #}
             </div>
         </div>
         
