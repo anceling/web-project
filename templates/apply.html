@@ -19,10 +19,13 @@ and open the template in the editor.
     </head>
     <body>
         <div id="applyContainer">
-            <h2>Do you wish to apply for:</h2>
-            <p>{{ category }} at {{ nation }}</p>
-            <p>the {{ date }} between {{ startTime }} and {{ endTime }}?</p>
-            <input type="button" value="APPLY">
+                <h2>Do you wish to apply for:</h2>
+                <p>{{ category }} at {{ nation }}</p>
+                <p>the {{ date }} between {{ startTime }} and {{ endTime }}?</p>
+            <div class="pure-u">
+                <input type="button" value="APPLY">
+                <input type="button" value="CANCEL" onclick="location.href='work.html';">
+            </div>
         </div>
     </body>
 </html>
