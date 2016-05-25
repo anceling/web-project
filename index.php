@@ -111,6 +111,10 @@ function show_work_all($vars){
 
 function show_work($vars){
 	
+	$twig = inittwig();
+	$sql = initdb();
+	
+	
 	
 	echo $_POST["nation"];
 	echo $_POST["pos"];
