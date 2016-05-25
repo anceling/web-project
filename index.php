@@ -14,6 +14,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'show_index');
 
     $r->addRoute('GET', '/work', 'show_work_all');
+    
+    $r->addRoute('POST', '/work', 'show_work');
 
     $r->addRoute('GET', '/profile', 'show_profile');
 });
@@ -150,8 +152,8 @@ function show_work_all($vars){
 function show_work($vars){
 	
 	
-	
-	
+	echo $_POST["nation"];
+	echo $_POST["pos"];
 	
 	
 	
