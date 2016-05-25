@@ -109,7 +109,7 @@ function showwork($vars){
 	}
 	
 
-	echo $twig->render('work.html');
+	//echo $twig->render('work.html');
 
 }
 
