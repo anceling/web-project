@@ -1,7 +1,7 @@
 <?php
 
 require 'vendor/autoload.php';
-require 'handlers.php'
+//require 'handlers.php'
 
 
 
@@ -43,6 +43,12 @@ switch ($routeInfo[0]) {
         break;
 }
 
+
+
+function showindex(){
+	echo "hej";
+	
+}
 
 
 
