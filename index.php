@@ -12,7 +12,6 @@ require 'vendor/autoload.php';
 
 $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
 $twig = new Twig_Environment($loader, array(
-	'debug' => true
     // Uncomment the line below to cache compiled templates
     // 'cache' => __DIR__.'/../cache',
 ));
@@ -63,12 +62,12 @@ switch ($routeInfo[0]) {
 
 
 
-function showindex($vars){
+function showindex($vars,$twig){
 
 	$name = "Mercury, Venus, Mars, Jupiter, Saturn, Uranus & Neptune.";
 
 
-	echo $twig->render('index.twig', array(
+	echo $twig->render('index.html', array(
     'name' => $name,
 ));
 	
