@@ -62,7 +62,7 @@ switch ($routeInfo[0]) {
 
 function showindex($vars){
 
-	echo $twig->render('index.html');
+	//echo $twig->render('index.html');
 	
 	echo "ahej13";
 	
