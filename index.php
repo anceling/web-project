@@ -141,7 +141,7 @@ function showwork($vars){
 	
 	}
 
-	echo $twig->render('work.html', $render_array);
+	echo $twig->render('work.html');
 
 }
 
