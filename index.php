@@ -103,7 +103,7 @@ function showwork($vars){
 		
 		while ($row = $result->fetch_assoc()){
 		
-		$render_array[$i];
+		$render_array[$i] = $row;
 		
 		$i = ++$i;
 		
