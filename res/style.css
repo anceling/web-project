@@ -7,6 +7,12 @@ width: 60% !important;
 
 }
 
+#dayContainer{
+
+width: 60% !important;
+
+}
+
 
 }
 
@@ -127,7 +133,7 @@ select{
     right:0;
     left:0;
     top: 25em;
-    width: 60%;
+    width: 100%;
 
 }
 
