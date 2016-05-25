@@ -111,7 +111,6 @@ function showwork($vars){
 		
 		
 		$sql->close();
-		print_r($render_array);
 		
 	}
 	
