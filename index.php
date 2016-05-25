@@ -56,10 +56,15 @@ switch ($routeInfo[0]) {
 }
 
 
+$name = "Mercury, Venus, Mars, Jupiter, Saturn, Uranus & Neptune.";
+
+
 
 function showindex($vars){
 
-	echo $twig->render('index.html');
+	echo $twig->render('index.html', array(
+    'name' => $name,
+));
 	
 	echo "ahej13";
 	
