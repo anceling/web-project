@@ -302,7 +302,6 @@ html, button, input, select, textarea,
 .applyButton{
     border: none;
     height: 2.5em;
-    width: 25%;
     border-radius: 3px;
     left: 0;
     right: 0;
@@ -403,4 +402,15 @@ color: #333;
 text-align: center;
 padding: 2.5em 2em 0px;
 border-bottom: 1px solid #eee;
+}
+
+#logga{
+	color: white;
+	padding: .5em 1em;
+	
+}
+
+.left-float {
+	text-align: left;
+	float: left;
 }

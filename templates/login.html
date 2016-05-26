@@ -1,33 +1,47 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Log in</title>
-		<meta charset="UTF-8">
-		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
+   
+   {% include 'head.html' with {'title': 'Login for nations'} %}
+	
+	<body>
 
-	</head>
-		<body>
-			<form class="pure-form" method ="POST" action="work.html">
-			<fieldset>
-			<legend>Login for nations</legend>
-			
- 
-			<label for="uname">Username</label><br></br>
-			<input type="text" placeholder="Username" required id="uname"/><br></br>
-			
-			<label for="password">Password</label><br></br>
-			<input type="text" placeholder="Password" required id="password"/>
-			<br></br>
-			
-			
-			<button type="submit" id="click">Log in</button>
-			
-			</fieldset>
-			</form>
-		
-		</body>
+        <div class="pure-menu pure-menu-horizontal">
+            <span class="pure-menu-list left-float" ><p id="logga" class="pure-menu-list">NATION JOBS</p></span>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">MY PROFILE</a></li>
+            </ul>
+            
+        </div>
+	
+	<div id="header">
+	<h1>Login for nations</h1>
+	</div>
+	
+
+	<div class="pure-g">
+	
+	<div id="profileform" class="pure-u-1 pure-u-md-1-5">
+	
+	
+	<form class="pure-form pure-form-stacked" method ="POST" action="work.html">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="uname">Username</label>
+            <input id="uname" type="text" placeholder="Username" name="uname">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="password">Password</label>
+            <input id="password" type="text" placeholder="Password" name="password">
+        </div>
+
+            <button type="submit" class="pure-button pure-button-primary applyButton">Submit</button>
+        </div>
+    </fieldset>
+</form>
+	
+	
+	
+	
+	
+	
+	    </body>
 </html>
