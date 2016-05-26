@@ -61,8 +61,14 @@
 
                     <div class="jobHeader">
                         <div class="pure-g">
-                            <div class="pure-u-1-4">
+                            <div class="pure-u-1-2">
                                 <h3 class="job_position">{{ job.category }}<span class="jobNumber">({{ job.shift_id }})</span></h3>
+                            </div>
+                             <div class="pure-u-1-2">
+                                <div class="plusAndMinus">
+                                    <div class="plus"></div>
+                                    <div class="minus"></div>
+                                </div>
                             </div>
                             </div>
                             <div class="pure-g">
@@ -71,12 +77,6 @@
                             </div>
                             <div class="pure-u-1-4">
                                 <h3 class="job_time">{{ job.startTime }} - {{ job.endTime }}</h3>
-                            </div>
-                            <div class="pure-u-1-5">
-                                <div class="plusAndMinus">
-                                    <div class="plus"></div>
-                                    <div class="minus"></div>
-                                </div>
                             </div>
                         </div>
                     </div>
